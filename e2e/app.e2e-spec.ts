@@ -7,8 +7,8 @@ describe('weather App', () => {
     page = new WeatherPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display title saying Angular 2 Weather', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Angular 2 Weather');
   });
 });

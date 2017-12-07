@@ -1,0 +1,2 @@
+.weather-list{margin:20px auto;width:40%;}
+@media screen and (max-width:768px){.weather-list{width:80%;}}

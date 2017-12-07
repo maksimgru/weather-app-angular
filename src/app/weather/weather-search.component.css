@@ -1,0 +1,7 @@
+.weather-search{margin:20px auto;width:40%;text-align:center;}
+.weather-search label{font-weight:700;margin-right:20px;}
+.weather-search button, .weather-search input{font-size:inherit;font-family:inherit;}
+.weather-search input{padding:3px 5px;outline:none;width:50%;margin-right:20px;}
+.weather-search button{background-color:#2ecc71;border:none;padding:4px 8px;box-shadow:1px 1px 1px #95a5a6;cursor:pointer;color:#fff;}
+.weather-search button:hover{background-color:#27ae60;}
+.info{color:rgba(95,95,95,.51);font-weight:700;}
