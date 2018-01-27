@@ -1,3 +1,3 @@
-import {WeatherItem} from "./weather-item";
+import {WeatherItem} from "./item/weather-item";
 
 export const WEATHER_ITEMS: WeatherItem[] = [];

@@ -1,0 +1,13 @@
+<section class="weather-search">
+    <div class="result">
+        <span class="info" *ngIf="!isCityFound">Search city here</span>
+        <span class="info" *ngIf="isCityFound">City found:</span> {{ data?.name }} {{ data?.sys?.country }}
+    </div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <label for="city">
+            <input ngControl="location" type="text" id="city" value="" (input)="onSearchLocation(input.value)" #input required placeholder="search ...">
+            <div id="mdev-overlay" *ngIf="isSearching"><div class="mdev-loader rotateLinear">&#9679;&#9679;</div></div>
+        </label>
+        <button type="submit">Add City</button>
+    </form>
+</section>

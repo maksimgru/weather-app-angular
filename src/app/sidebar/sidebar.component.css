@@ -1,1 +1,84 @@
-:host{float:left;margin-top:10px;width:25%;padding:10px}h3{margin:0 0 10px;padding:0;font-size:18px}button{font-size:14px;font-family:inherit;background-color:#3498db;box-shadow:1px 1px 1px #95a5a6;border:none;padding:4px 8px;cursor:pointer;color:#fff}button:hover{background-color:#2980b9}.profile{position:relative;background-color:#b9d5e8;padding:5px;margin-top:8px;cursor:pointer}.profile h4{margin:0;paddin:0}.profile p{margin:0;padding:0}.profile .delete{position:absolute;top:2px;right:5px;font-size:14px;color:#7f8c8d}.profile .delete:hover{color:red}.profile:hover{background-color:#3498db}
+:host{
+    float:left;
+    width:25%;
+    padding:0 10px 0 0;
+}
+h3{
+    margin:0 0 10px;
+    padding:0;
+    font-size:18px;
+}
+button{
+    display:block;
+    width:100%;
+    font-size:16px;
+    font-family:inherit;
+    background-color:#3498db;
+    box-shadow:2px 2px 6px #95a5a6;
+    border:none;
+    padding:8px;
+    cursor:pointer;
+    color:#fff;
+    transition: all 0.1s;
+}
+button:active,button:focus{
+    outline: none;
+}
+button:active{
+    transform: scale(1.05);
+    /*box-shadow:1px 1px 6px #95a5a6;*/
+}
+button:hover{
+    background-color:#2980b9
+}
+.profile{
+    position:relative;
+    cursor:pointer;
+}
+.profile h4{
+    margin:0;
+    paddin:0;
+}
+.profile p{
+    margin:0;
+    padding:0;
+}
+.profile .delete{
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-weight:bold;
+    font-size:1em;
+    line-height:1em;
+    color: rgba(255, 0, 0, 0.5);
+    text-align: center;
+    display:block;
+    width:1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    border:2px solid;
+    transition: all 0.1s;
+}
+.profile:hover .delete{
+    color:rgba(255, 0, 0, 0.5);
+}
+.profile .delete:hover{
+    color: rgb(170, 15, 0);
+    transform: scale(1.2);
+}
+.profile .inner{
+    padding:5px;
+    margin-top:10px;
+    background-color:#b9d5e8;
+    transition: all 0.1s;
+}
+.profile,
+.profile:hover,
+.profile:hover .inner,
+.profile .inner:hover{
+    background-color:#3498db;
+}
+.profile .inner:active{
+    transform: scale(1.05);
+}

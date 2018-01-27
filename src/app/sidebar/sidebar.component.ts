@@ -1,13 +1,14 @@
 import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs/Observable";
 
-import { Profile } from "./../profile/profile";
-import { ProfileService } from "./../profile/profile.service";
-import { WeatherService } from "./../weather/weather.service";
-import { WeatherItem } from "./../weather/weather-item";
+import { Observable } from "rxjs/Rx";
+
+import { Profile } from "../profile/profile";
+import { ProfileService } from "../profile/profile.service";
+import { WeatherService } from "../weather/weather.service";
+import { WeatherItem } from "../weather/item/weather-item";
 
 @Component({
-    selector: 'my-sidebar',
+    selector: 'weather-sidebar',
     templateUrl: './sidebar.component.html',
     styleUrls: ['./sidebar.component.css']
 })
@@ -18,22 +19,28 @@ export class SidebarComponent implements OnInit {
 
     onSaveNewProfile() {
         const cities = this._weatherService.getWeatherItems().map(function (element) {
-                return element.city;
+                return {
+                    cityName: element.city,
+                    countryCode: element.countryCode
+                };
             });
-        this._profileService.saveNewProfile(cities);
+        if (cities.length) {
+            this._profileService.saveNewProfile(cities);
+        }
     }
 
     onLoadProfile(profile: Profile):void {
         this._weatherService.clearWeatherItems();
         for (let i = 0; i < profile.cities.length; i++) {
-            this._weatherService.searchWeatherInfo(profile.cities[i])
-                //.retry()
+            this._weatherService.searchWeatherInfo(profile.cities[i].cityName)
+                .retry()
                 .subscribe(
                     data => {
-                        let cityName: string = data.name + '(' + data.sys.country + ')';
+                        let cityName: string = data.name;
                         let cityDescription: string = data.weather[0].main;
                         let cityTemperature: number = +data.main.temp_min;
-                        const weatherItem = new WeatherItem(cityName, cityDescription, cityTemperature);
+                        let countryCode = data.sys.country;
+                        const weatherItem = new WeatherItem(cityName, cityDescription, cityTemperature, countryCode);
                         this._weatherService.addWeatherItem(weatherItem);
                     }
                 );
