@@ -10,7 +10,7 @@
 .weather-search button{background-color:#2ecc71;border:none;padding:8px;box-shadow:2px 2px 6px #95a5a6;cursor:pointer;color:#fff;transition: all 0.1s;}
 .weather-search button:hover{background-color:#27ae60;}
 .weather-search button:active,.weather-search button:focus{outline:none;}
-.weather-search button:active{/*box-shadow: 1px 1px 6px #95a5a6;*/ transform: scale(1.1);}
+.weather-search button:active{transform: scale(1.05);}
 .result{font-size:2em;}
 .info{color:rgba(95,95,95,.51);font-weight:700;}
 

@@ -25,8 +25,7 @@ button:active,button:focus{
     outline: none;
 }
 button:active{
-    transform: scale(1.05);
-    /*box-shadow:1px 1px 6px #95a5a6;*/
+    transform: scale(0.95);
 }
 button:hover{
     background-color:#2980b9
@@ -37,7 +36,7 @@ button:hover{
 }
 .profile h4{
     margin:0;
-    paddin:0;
+    padding:0;
 }
 .profile p{
     margin:0;
@@ -46,26 +45,16 @@ button:hover{
 .profile .delete{
     position:absolute;
     top:5px;
-    right:5px;
-    font-weight:bold;
+    right:10px;
     font-size:1em;
     line-height:1em;
     color: rgba(255, 0, 0, 0.5);
     text-align: center;
     display:block;
     width:1em;
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    border-radius: 1em;
-    border:2px solid;
-    transition: all 0.1s;
-}
-.profile:hover .delete{
-    color:rgba(255, 0, 0, 0.5);
 }
 .profile .delete:hover{
     color: rgb(170, 15, 0);
-    transform: scale(1.2);
 }
 .profile .inner{
     padding:5px;

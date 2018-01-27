@@ -6,12 +6,12 @@
 .weather-element{position:relative;box-shadow:1px 1px 6px #ccc;padding:10px;margin:10px 0;}
 .weather-element .delete{
     position: absolute;
-    top: 2px;
-    right: 5px;
-    font-size: 14px;
-    color: #7f8c8d;
+    top: 5px;
+    right: 10px;
+    font-size: 1em;
+    color: rgba(255, 0, 0, 0.5);
     cursor: pointer;
 }
 .weather-element .delete:hover{
-    color: red;
+    color: rgb(170, 15, 0);
 }
